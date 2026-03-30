@@ -2270,7 +2270,7 @@ table.report tr:last-child td { border-bottom: none; }
           <p>Class 12A — 38 students · Last active 2 hours ago</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <button class="btn btn-sm" style="background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.2);">
+          <button class="btn btn-sm" style="background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.2);" onclick="toast('Generating report… Check your downloads in a moment.','info',3000);">
             <i data-lucide="download" style="width:14px;height:14px;"></i>
             Export Report
           </button>
@@ -2351,8 +2351,8 @@ table.report tr:last-child td { border-bottom: none; }
             <div class="t-row-val">79%</div>
             <div><span class="pill-status pill-published">Published</span></div>
             <div style="display:flex;gap:4px;">
-              <div class="nav-icon-btn" style="width:28px;height:28px;"><i data-lucide="edit-2" style="width:13px;height:13px;"></i></div>
-              <div class="nav-icon-btn" style="width:28px;height:28px;"><i data-lucide="bar-chart-2" style="width:13px;height:13px;"></i></div>
+              <div class="nav-icon-btn" style="width:28px;height:28px;cursor:pointer;" onclick="event.stopPropagation();const title=this.closest('.t-row').querySelector('.t-row-title')?.textContent||'Story';openStoryRow(title);"><i data-lucide="edit-2" style="width:13px;height:13px;"></i></div>
+              <div class="nav-icon-btn" style="width:28px;height:28px;cursor:pointer;" onclick="event.stopPropagation();toast('Analytics loaded for this story','info',2000);"><i data-lucide="bar-chart-2" style="width:13px;height:13px;"></i></div>
             </div>
           </div>
           <div class="t-row">
@@ -2367,8 +2367,8 @@ table.report tr:last-child td { border-bottom: none; }
             <div class="t-row-val">85%</div>
             <div><span class="pill-status pill-published">Published</span></div>
             <div style="display:flex;gap:4px;">
-              <div class="nav-icon-btn" style="width:28px;height:28px;"><i data-lucide="edit-2" style="width:13px;height:13px;"></i></div>
-              <div class="nav-icon-btn" style="width:28px;height:28px;"><i data-lucide="bar-chart-2" style="width:13px;height:13px;"></i></div>
+              <div class="nav-icon-btn" style="width:28px;height:28px;cursor:pointer;" onclick="event.stopPropagation();const title=this.closest('.t-row').querySelector('.t-row-title')?.textContent||'Story';openStoryRow(title);"><i data-lucide="edit-2" style="width:13px;height:13px;"></i></div>
+              <div class="nav-icon-btn" style="width:28px;height:28px;cursor:pointer;" onclick="event.stopPropagation();toast('Analytics loaded for this story','info',2000);"><i data-lucide="bar-chart-2" style="width:13px;height:13px;"></i></div>
             </div>
           </div>
           <div class="t-row">
@@ -2382,8 +2382,8 @@ table.report tr:last-child td { border-bottom: none; }
             <div class="t-row-val muted">—</div>
             <div><span class="pill-status pill-draft">Draft</span></div>
             <div style="display:flex;gap:4px;">
-              <div class="nav-icon-btn" style="width:28px;height:28px;"><i data-lucide="edit-2" style="width:13px;height:13px;"></i></div>
-              <div class="nav-icon-btn" style="width:28px;height:28px;"><i data-lucide="trash-2" style="width:13px;height:13px;"></i></div>
+              <div class="nav-icon-btn" style="width:28px;height:28px;cursor:pointer;" onclick="event.stopPropagation();const title=this.closest('.t-row').querySelector('.t-row-title')?.textContent||'Story';openStoryRow(title);"><i data-lucide="edit-2" style="width:13px;height:13px;"></i></div>
+              <div class="nav-icon-btn" style="width:28px;height:28px;cursor:pointer;" onclick="event.stopPropagation();if(confirm('Delete this story?'))toast('Story deleted.','error',2000);"><i data-lucide="trash-2" style="width:13px;height:13px;"></i></div>
             </div>
           </div>
           <div class="t-row">
@@ -2398,8 +2398,8 @@ table.report tr:last-child td { border-bottom: none; }
             <div class="t-row-val">61%</div>
             <div><span class="pill-status pill-published">Published</span></div>
             <div style="display:flex;gap:4px;">
-              <div class="nav-icon-btn" style="width:28px;height:28px;"><i data-lucide="edit-2" style="width:13px;height:13px;"></i></div>
-              <div class="nav-icon-btn" style="width:28px;height:28px;"><i data-lucide="bar-chart-2" style="width:13px;height:13px;"></i></div>
+              <div class="nav-icon-btn" style="width:28px;height:28px;cursor:pointer;" onclick="event.stopPropagation();const title=this.closest('.t-row').querySelector('.t-row-title')?.textContent||'Story';openStoryRow(title);"><i data-lucide="edit-2" style="width:13px;height:13px;"></i></div>
+              <div class="nav-icon-btn" style="width:28px;height:28px;cursor:pointer;" onclick="event.stopPropagation();toast('Analytics loaded for this story','info',2000);"><i data-lucide="bar-chart-2" style="width:13px;height:13px;"></i></div>
             </div>
           </div>
         </div>
@@ -2412,7 +2412,7 @@ table.report tr:last-child td { border-bottom: none; }
           </div>
           <div style="padding:20px;">
             <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
-              <div style="padding:12px;border-radius:var(--radius-sm);background:#FEF2F2;text-align:center;cursor:pointer;">
+              <div style="padding:12px;border-radius:var(--radius-sm);background:#FEF2F2;text-align:center;cursor:pointer;" onclick="toast('Finding stories on Thermodynamics for your class…','info',2500);">
                 <div style="font-size:20px;font-weight:800;color:#DC2626;">38%</div>
                 <div style="font-size:11px;color:#EF4444;margin-top:2px;">Thermodynamics</div>
               </div>
@@ -2432,7 +2432,7 @@ table.report tr:last-child td { border-bottom: none; }
                 <div style="font-size:20px;font-weight:800;color:#B8860B;">67%</div>
                 <div style="font-size:11px;color:#B8860B;margin-top:2px;">Magnetism</div>
               </div>
-              <div style="padding:12px;border-radius:var(--radius-sm);background:#ECFDF5;text-align:center;cursor:pointer;">
+              <div style="padding:12px;border-radius:var(--radius-sm);background:#ECFDF5;text-align:center;cursor:pointer;" onclick="toast('Great! Students are strong in Mechanics.','success',2500);">
                 <div style="font-size:20px;font-weight:800;color:#059669;">74%</div>
                 <div style="font-size:11px;color:#059669;margin-top:2px;">Mechanics</div>
               </div>
@@ -2904,8 +2904,8 @@ table.report tr:last-child td { border-bottom: none; }
 <div class="highlight-tooltip" id="highlight-tooltip">
   <i data-lucide="message-circle" style="width:13px;height:13px;"></i>
   <span style="font-size:12px;">Ask a doubt</span>
-  <button class="ht-btn" onclick="document.getElementById('highlight-tooltip').classList.remove('visible')">Ask</button>
-  <button class="ht-btn" onclick="toggleSimplify();document.getElementById('highlight-tooltip').classList.remove('visible')">Simplify</button>
+  <button class="ht-btn" onclick="askHighlightDoubt()">Ask</button>
+  <button class="ht-btn" onclick="simplifyHighlighted()">Simplify</button>
 </div>
 
 <!-- Simplify popup -->
@@ -2962,7 +2962,7 @@ table.report tr:last-child td { border-bottom: none; }
         <i data-lucide="arrow-left" style="width:14px;height:14px;"></i>
         Back to Story
       </button>
-      <button class="btn btn-primary">
+      <button class="btn btn-primary" onclick="downloadExamNotes()">
         <i data-lucide="download" style="width:14px;height:14px;"></i>
         Download PDF
       </button>
@@ -2974,10 +2974,99 @@ table.report tr:last-child td { border-bottom: none; }
      JAVASCRIPT
      ============================================================ -->
 <script>
-// Initialize Lucide icons
-document.addEventListener('DOMContentLoaded', () => { lucide.createIcons(); });
+/* ============================================================
+   CLARITY LOOP — FULLY FUNCTIONAL APP
+   ============================================================ */
 
-// Page navigation
+// ── State ──────────────────────────────────────────────────
+const state = {
+  dark: false,
+  currentPage: 'home',
+  user: null,          // null = logged out
+  role: 'student',     // 'student' | 'teacher'
+  saved: new Set(),    // saved story ids
+  quizScores: {},
+  doubtHistory: [],
+  readProgress: 0,
+};
+
+/* ─────────────────── TOAST SYSTEM ─────────────────────── */
+function toast(msg, type = 'info', duration = 3200) {
+  let container = document.getElementById('toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toast-container';
+    container.style.cssText = `
+      position:fixed;bottom:24px;right:24px;z-index:99999;
+      display:flex;flex-direction:column;gap:8px;pointer-events:none;
+    `;
+    document.body.appendChild(container);
+  }
+  const colors = {
+    info:    'var(--fg)',
+    success: '#1D6B4F',
+    error:   '#DC2626',
+    warning: '#B8860B'
+  };
+  const icons = {
+    info:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
+    success:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
+    error:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>',
+    warning:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'
+  };
+  const t = document.createElement('div');
+  t.style.cssText = `
+    display:flex;align-items:center;gap:10px;
+    background:${colors[type]};color:white;
+    padding:12px 18px;border-radius:10px;
+    font-family:var(--font-ui);font-size:13.5px;font-weight:500;
+    box-shadow:0 8px 24px rgba(0,0,0,.18);
+    pointer-events:all;cursor:pointer;max-width:320px;
+    transform:translateX(120%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+  `;
+  t.innerHTML = `${icons[type]}<span>${msg}</span>`;
+  t.onclick = () => remove();
+  container.appendChild(t);
+  requestAnimationFrame(() => { t.style.transform = 'translateX(0)'; });
+  const remove = () => {
+    t.style.transform = 'translateX(120%)';
+    setTimeout(() => t.remove(), 300);
+  };
+  setTimeout(remove, duration);
+  return t;
+}
+
+/* ─────────────────── MODAL SYSTEM ─────────────────────── */
+function showModal(html, opts = {}) {
+  let overlay = document.getElementById('modal-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'modal-overlay';
+    overlay.style.cssText = `
+      position:fixed;inset:0;z-index:8000;
+      background:rgba(0,0,0,.55);backdrop-filter:blur(4px);
+      display:flex;align-items:center;justify-content:center;padding:20px;
+      animation:pageFade .25s ease;
+    `;
+    overlay.onclick = e => { if(e.target===overlay && !opts.persistent) closeModal(); };
+    document.body.appendChild(overlay);
+  }
+  overlay.innerHTML = `
+    <div style="
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:var(--radius-lg);max-width:${opts.maxWidth||'480px'};
+      width:100%;max-height:90vh;overflow-y:auto;
+      box-shadow:var(--shadow-lg);animation:pageFade .25s ease;
+    ">${html}</div>
+  `;
+  overlay.style.display = 'flex';
+}
+function closeModal() {
+  const o = document.getElementById('modal-overlay');
+  if (o) { o.style.opacity = '0'; setTimeout(() => o.remove(), 200); }
+}
+
+/* ─────────────────── PAGE NAVIGATION ─────────────────────── */
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   const page = document.getElementById('page-' + id);
@@ -2985,26 +3074,36 @@ function showPage(id) {
     page.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+  state.currentPage = id;
+
   // Close overlays
-  document.getElementById('exam-overlay').classList.remove('visible');
-  document.getElementById('simplify-popup').classList.remove('visible');
+  ['exam-overlay','simplify-popup','highlight-tooltip'].forEach(oid => {
+    const el = document.getElementById(oid);
+    if (el) el.classList.remove('visible');
+  });
 
-  // Re-init icons after page switch
-  setTimeout(() => lucide.createIcons(), 50);
-  if (id === 'admin') setTimeout(buildAdminCharts, 80);
+  // Update nav active state
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const navMap = { library:'library', student:'for-students', teacher:'for-teachers', doubt:'ask-doubt', admin:'admin' };
+
+  // Rebuild icons after page switch
+  setTimeout(() => {
+    lucide.createIcons();
+    if (id === 'admin') setTimeout(buildAdminCharts, 80);
+    if (id === 'reader') initReader();
+    if (id === 'library') updateLibraryCount();
+  }, 50);
 }
 
-// Theme toggle
-let dark = false;
+/* ─────────────────── THEME ─────────────────────── */
 function toggleTheme() {
-  dark = !dark;
-  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  state.dark = !state.dark;
+  document.documentElement.setAttribute('data-theme', state.dark ? 'dark' : 'light');
   const icon = document.getElementById('theme-icon');
-  icon.setAttribute('data-lucide', dark ? 'moon' : 'sun');
-  lucide.createIcons();
+  if (icon) { icon.setAttribute('data-lucide', state.dark ? 'moon' : 'sun'); lucide.createIcons(); }
 }
 
-// Auth tabs
+/* ─────────────────── AUTH TABS ─────────────────────── */
 function switchAuthTab(tab) {
   const signup = document.getElementById('auth-signup');
   const signin = document.getElementById('auth-signin');
@@ -3012,152 +3111,1168 @@ function switchAuthTab(tab) {
   const tabI = document.getElementById('tab-signin');
   if (tab === 'signup') {
     signup.style.display = 'block'; signin.style.display = 'none';
-    tabS.className = 'btn btn-primary btn-sm'; tabS.style = 'flex:1;justify-content:center;';
-    tabI.className = 'btn btn-ghost btn-sm'; tabI.style = 'flex:1;justify-content:center;color:var(--fg-muted);';
+    tabS.className = 'btn btn-primary btn-sm'; tabS.style.cssText = 'flex:1;justify-content:center;';
+    tabI.className = 'btn btn-ghost btn-sm'; tabI.style.cssText = 'flex:1;justify-content:center;color:var(--fg-muted);';
   } else {
     signup.style.display = 'none'; signin.style.display = 'block';
-    tabI.className = 'btn btn-primary btn-sm'; tabI.style = 'flex:1;justify-content:center;';
-    tabS.className = 'btn btn-ghost btn-sm'; tabS.style = 'flex:1;justify-content:center;color:var(--fg-muted);';
+    tabI.className = 'btn btn-primary btn-sm'; tabI.style.cssText = 'flex:1;justify-content:center;';
+    tabS.className = 'btn btn-ghost btn-sm'; tabS.style.cssText = 'flex:1;justify-content:center;color:var(--fg-muted);';
   }
 }
 
-// Role selector
+/* ─────────────────── ROLE SELECTOR ─────────────────────── */
 function selectRole(role) {
+  state.role = role;
   document.getElementById('role-student').classList.toggle('selected', role === 'student');
   document.getElementById('role-teacher').classList.toggle('selected', role === 'teacher');
 }
 
-// Exam mode
+/* ─────────────────── AUTH FORM HANDLING ─────────────────────── */
+function handleSignup() {
+  const name = document.querySelector('#auth-signup input[type="text"]')?.value.trim();
+  const email = document.querySelector('#auth-signup input[type="email"]')?.value.trim();
+  const password = document.querySelector('#auth-signup input[type="password"]')?.value.trim();
+
+  clearAuthErrors();
+  let valid = true;
+
+  if (!name) { showFieldError('#auth-signup input[type="text"]', 'Please enter your name'); valid = false; }
+  if (!email || !email.includes('@')) { showFieldError('#auth-signup input[type="email"]', 'Enter a valid email'); valid = false; }
+  if (!password || password.length < 6) { showFieldError('#auth-signup input[type="password"]', 'Password must be at least 6 characters'); valid = false; }
+  if (!valid) return;
+
+  // Simulate account creation
+  state.user = { name, email, role: state.role };
+  toast(`Welcome to Clarity Loop, ${name}! 🎉`, 'success');
+  if (state.role === 'teacher') {
+    showPage('teacher');
+  } else {
+    showPage('student');
+  }
+}
+
+function handleSignin() {
+  const email = document.querySelector('#auth-signin input[type="email"]')?.value.trim();
+  const password = document.querySelector('#auth-signin input[type="password"]')?.value.trim();
+
+  clearAuthErrors();
+  let valid = true;
+  if (!email || !email.includes('@')) { showFieldError('#auth-signin input[type="email"]', 'Enter a valid email'); valid = false; }
+  if (!password) { showFieldError('#auth-signin input[type="password"]', 'Enter your password'); valid = false; }
+  if (!valid) return;
+
+  // Simulate sign in — demo: any credentials work
+  state.user = { name: 'Arjun Mehta', email, role: 'student' };
+  toast('Welcome back, Arjun! 👋', 'success');
+  showPage('student');
+}
+
+function showFieldError(selector, msg) {
+  const input = document.querySelector(selector);
+  if (!input) return;
+  input.style.borderColor = '#DC2626';
+  const err = document.createElement('div');
+  err.className = '__auth-err';
+  err.style.cssText = 'color:#DC2626;font-size:12px;margin-top:4px;';
+  err.textContent = msg;
+  input.parentNode.appendChild(err);
+}
+function clearAuthErrors() {
+  document.querySelectorAll('.__auth-err').forEach(e => e.remove());
+  document.querySelectorAll('.form-input').forEach(i => i.style.borderColor = '');
+}
+
+/* ─────────────────── LIBRARY SEARCH & FILTER ─────────────────────── */
+function initLibrary() {
+  const searchInput = document.querySelector('.library-header .search-box input');
+  if (searchInput) {
+    searchInput.addEventListener('input', filterLibrary);
+  }
+  const sortSelect = document.querySelector('.library-body select');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', function() {
+      toast(`Sorted by: ${this.value}`, 'info', 2000);
+    });
+  }
+}
+
+function filterLibrary() {
+  const q = (document.querySelector('.library-header .search-box input')?.value || '').toLowerCase();
+  const activePill = document.querySelector('.filter-pill.active')?.textContent?.trim() || 'All';
+
+  const cards = document.querySelectorAll('.story-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const title = card.querySelector('.story-card-title')?.textContent?.toLowerCase() || '';
+    const excerpt = card.querySelector('.story-card-excerpt')?.textContent?.toLowerCase() || '';
+    const subject = card.querySelector('.badge')?.textContent?.toLowerCase() || '';
+    const matchesSearch = !q || title.includes(q) || excerpt.includes(q) || subject.includes(q);
+    const matchesFilter = activePill === 'All' || subject.includes(activePill.toLowerCase());
+    const show = matchesSearch && matchesFilter;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  updateLibraryCount(visible);
+}
+
+function updateLibraryCount(n) {
+  const countEl = document.querySelector('.library-body .flex strong');
+  if (countEl) {
+    const total = n !== undefined ? n : document.querySelectorAll('.story-card').length;
+    countEl.textContent = `${total} ${total === 1 ? 'story' : 'stories'}`;
+  }
+}
+
+/* ─────────────────── FILTER PILLS ─────────────────────── */
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('filter-pill')) {
+    const container = e.target.closest('.filter-pills');
+    if (container) {
+      container.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      e.target.classList.add('active');
+      filterLibrary();
+    }
+  }
+});
+
+/* ─────────────────── SIDEBAR ITEMS ─────────────────────── */
+document.addEventListener('click', function(e) {
+  if (e.target.closest('.sidebar-item')) {
+    const item = e.target.closest('.sidebar-item');
+    const section = item.closest('.sidebar-section');
+    if (section) {
+      section.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+    }
+  }
+});
+
+/* ─────────────────── READER FUNCTIONS ─────────────────────── */
+function initReader() {
+  const sections = ['section-story','section-concept','section-key','section-exam'];
+  const tocItems = document.querySelectorAll('.toc-item');
+
+  // Click TOC items to scroll
+  tocItems.forEach((item, i) => {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', () => {
+      const targets = [
+        document.getElementById('section-story'),
+        document.getElementById('section-concept'),
+        document.getElementById('section-key'),
+        document.getElementById('section-exam'),
+        document.querySelector('.quiz-section'),
+      ];
+      const target = targets[i];
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Progress tracking
+  function updateProgress() {
+    const page = document.getElementById('page-reader');
+    if (!page || !page.classList.contains('active')) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+    const bar = document.getElementById('reader-prog');
+    if (bar) bar.style.width = progress + '%';
+
+    // Update sidebar progress
+    const sidebarFill = document.querySelector('.reader-sidebar-panel .progress-fill');
+    const sidebarPct = document.querySelector('.reader-sidebar-panel .progress-track + div span:last-child, .reader-sidebar-panel [style*="font-weight:700;color:var(--accent)"]');
+    if (sidebarFill) sidebarFill.style.width = Math.round(progress) + '%';
+
+    state.readProgress = progress;
+
+    // Active TOC tracking
+    const sectionEls = [
+      document.getElementById('section-story'),
+      document.getElementById('section-concept'),
+      document.getElementById('section-key'),
+      document.getElementById('section-exam'),
+      document.querySelector('.quiz-section'),
+    ];
+    let activeIdx = 0;
+    sectionEls.forEach((el, i) => {
+      if (el && el.getBoundingClientRect().top <= 120) activeIdx = i;
+    });
+    document.querySelectorAll('.toc-item').forEach((item, i) => {
+      item.classList.toggle('active', i === activeIdx);
+    });
+  }
+
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+}
+
+/* ─────────────────── TOOLBAR BUTTONS ─────────────────────── */
 function toggleExamMode() {
   const overlay = document.getElementById('exam-overlay');
   overlay.classList.toggle('visible');
+  if (overlay.classList.contains('visible')) {
+    // Toggle toolbar button active state
+    document.querySelectorAll('.toolbar-btn').forEach(b => {
+      if (b.textContent.includes('Exam Mode')) b.classList.add('active');
+    });
+  } else {
+    document.querySelectorAll('.toolbar-btn').forEach(b => {
+      if (b.textContent.includes('Exam Mode')) b.classList.remove('active');
+    });
+  }
   lucide.createIcons();
 }
 
-// Simplify popup
 function toggleSimplify() {
   const popup = document.getElementById('simplify-popup');
   popup.classList.toggle('visible');
 }
 
-// Quiz selection
-function quizSelect(btn, isCorrect) {
-  const opts = btn.closest('.quiz-options').querySelectorAll('.quiz-opt');
-  opts.forEach(o => { o.classList.remove('correct', 'wrong'); o.style.pointerEvents = 'none'; });
-  btn.classList.add(isCorrect ? 'correct' : 'wrong');
-  if (!isCorrect) {
-    opts.forEach(o => {
-      if (o.getAttribute('onclick') && o.getAttribute('onclick').includes('true')) {
-        o.classList.add('correct');
+let isSaved = false;
+function toggleSave() {
+  isSaved = !isSaved;
+  const btn = document.querySelector('.toolbar-btn:has([data-lucide="bookmark"]), .toolbar-btn .lucide-bookmark')?.closest('.toolbar-btn');
+  if (isSaved) {
+    state.saved.add('resonance-story');
+    toast('Story saved to your library! 📖', 'success');
+    document.querySelectorAll('.toolbar-btn').forEach(b => {
+      if (b.textContent.trim().includes('Save')) {
+        b.classList.add('active');
+        b.innerHTML = b.innerHTML.replace('Save','Saved');
+      }
+    });
+  } else {
+    state.saved.delete('resonance-story');
+    toast('Story removed from saved.', 'info', 2000);
+    document.querySelectorAll('.toolbar-btn').forEach(b => {
+      if (b.textContent.trim().includes('Saved')) {
+        b.classList.remove('active');
+        b.innerHTML = b.innerHTML.replace('Saved','Save');
       }
     });
   }
 }
 
-// Text highlight tooltip
+function shareStory() {
+  const url = window.location.href;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => {
+      toast('Link copied to clipboard! 🔗', 'success');
+    });
+  } else {
+    toast('Link: ' + url, 'info');
+  }
+}
+
+/* ─────────────────── EXAM QUESTIONS ─────────────────────── */
+// Already handled by inline onclick, but enhance with animation
+document.addEventListener('click', function(e) {
+  const eq = e.target.closest('.exam-q');
+  if (eq) {
+    const wasRevealed = eq.classList.contains('revealed');
+    eq.classList.toggle('revealed');
+    if (!wasRevealed) {
+      const ans = eq.querySelector('.exam-q-ans');
+      if (ans) {
+        ans.style.animation = 'pageFade .3s ease';
+      }
+    }
+  }
+});
+
+/* ─────────────────── QUIZ ─────────────────────── */
+let quizAnswers = {};
+let quizTotal = 0;
+let quizCorrect = 0;
+
+function quizSelect(btn, isCorrect) {
+  const qEl = btn.closest('.quiz-q');
+  if (!qEl || qEl.dataset.answered) return; // prevent re-answering
+
+  const opts = qEl.querySelectorAll('.quiz-opt');
+  opts.forEach(o => { o.classList.remove('correct','wrong'); o.style.pointerEvents = 'none'; });
+  btn.classList.add(isCorrect ? 'correct' : 'wrong');
+  if (!isCorrect) {
+    opts.forEach(o => {
+      const oc = o.getAttribute('onclick') || '';
+      if (oc.includes('true')) o.classList.add('correct');
+    });
+  }
+  qEl.dataset.answered = '1';
+  if (isCorrect) quizCorrect++;
+  quizTotal = document.querySelectorAll('.quiz-q[data-answered]').length;
+  const allQuestions = document.querySelectorAll('.quiz-q').length;
+
+  // Show result when all answered
+  if (quizTotal === allQuestions) {
+    setTimeout(() => showQuizResult(quizCorrect, allQuestions), 600);
+  }
+}
+
+function showQuizResult(correct, total) {
+  const pct = Math.round((correct/total)*100);
+  const grade = pct >= 80 ? '🏆 Excellent!' : pct >= 60 ? '👍 Good job!' : '📖 Keep practicing!';
+  const color = pct >= 80 ? 'var(--accent-2)' : pct >= 60 ? 'var(--gold)' : 'var(--accent)';
+  const resultDiv = document.createElement('div');
+  resultDiv.style.cssText = `
+    margin-top:20px;padding:20px;border-radius:var(--radius-md);
+    background:var(--bg-subtle);border:1.5px solid ${color};
+    text-align:center;animation:pageFade .4s ease;
+  `;
+  resultDiv.innerHTML = `
+    <div style="font-size:28px;margin-bottom:8px;">${grade}</div>
+    <div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:${color};">${correct}/${total} correct — ${pct}%</div>
+    <div style="font-size:13px;color:var(--fg-muted);margin-top:6px;">
+      ${pct >= 80 ? 'Outstanding! You have mastered this topic.' : pct >= 60 ? 'Good understanding. Review the key points once more.' : 'Revisit the concept section and try again.'}
+    </div>
+    <button class="btn btn-sm btn-primary" onclick="resetQuiz()" style="margin-top:14px;">
+      Try Again
+    </button>
+  `;
+  const quizSection = document.querySelector('.quiz-section');
+  const existing = quizSection?.querySelector('.quiz-result');
+  if (existing) existing.remove();
+  resultDiv.classList.add('quiz-result');
+  quizSection?.appendChild(resultDiv);
+}
+
+function resetQuiz() {
+  document.querySelectorAll('.quiz-q').forEach(q => {
+    delete q.dataset.answered;
+    q.querySelectorAll('.quiz-opt').forEach(o => {
+      o.classList.remove('correct','wrong');
+      o.style.pointerEvents = '';
+    });
+  });
+  document.querySelector('.quiz-result')?.remove();
+  quizCorrect = 0; quizTotal = 0;
+}
+
+/* ─────────────────── EXAM DOWNLOAD PDF ─────────────────────── */
+function downloadExamNotes() {
+  toast('Preparing PDF download…', 'info');
+  setTimeout(() => {
+    const el = document.querySelector('.exam-notes');
+    if (!el) return;
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(`
+      <html>
+      <head>
+        <title>Clarity Loop — Exam Notes: Resonance</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <style>
+          body { font-family: 'DM Sans', sans-serif; max-width: 700px; margin: 40px auto; color: #1C1917; padding: 20px; }
+          h1 { font-family: 'Playfair Display'; font-size: 28px; margin-bottom: 8px; }
+          .header { background: #1A2540; color: white; padding: 20px 24px; border-radius: 8px; margin-bottom: 28px; }
+          .header h1 { color: white; margin: 0 0 4px; }
+          .header p { color: rgba(255,255,255,.7); font-size: 13px; margin: 0; }
+          .section { margin-bottom: 28px; }
+          .section-title { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #C4500A; border-bottom: 2px solid #FAE8DC; padding-bottom: 8px; margin-bottom: 14px; }
+          .content { font-size: 15px; line-height: 1.8; font-family: 'Lora', serif; }
+          .formula { font-family: monospace; background: #EFECe6; padding: 12px 16px; border-radius: 6px; font-size: 16px; }
+          .point { display: flex; gap: 10px; margin-bottom: 8px; font-size: 14px; line-height: 1.65; }
+          .bullet { color: #C4500A; font-weight: 700; flex-shrink: 0; }
+          @media print { body { margin: 20px; } }
+        </style>
+      </head>
+      <body>
+        <div class="header">
+          <h1>⚡ Exam Notes — Resonance</h1>
+          <p>Physics · Class 12 · Clarity Loop · Generated ${new Date().toLocaleDateString()}</p>
+        </div>
+        ${el.innerHTML}
+      </body>
+      </html>
+    `);
+    printWindow.document.close();
+    setTimeout(() => { printWindow.print(); }, 500);
+    toast('PDF ready! Check your print dialog.', 'success');
+  }, 800);
+}
+
+/* ─────────────────── HIGHLIGHT TOOLTIP ─────────────────────── */
 document.addEventListener('mouseup', function(e) {
   const selection = window.getSelection();
   const tooltip = document.getElementById('highlight-tooltip');
-  if (selection && selection.toString().trim().length > 10) {
+  if (!tooltip) return;
+  if (selection && selection.toString().trim().length > 8) {
     const range = selection.getRangeAt(0);
     const rect = range.getBoundingClientRect();
-    tooltip.style.top = (rect.top + window.scrollY - 48) + 'px';
-    tooltip.style.left = (rect.left + rect.width / 2 - 80) + 'px';
+    tooltip.style.top = (rect.top + window.scrollY - 56) + 'px';
+    tooltip.style.left = Math.max(8, rect.left + rect.width / 2 - 110) + 'px';
     tooltip.classList.add('visible');
+    tooltip.dataset.selected = selection.toString().trim();
     lucide.createIcons();
-  } else if (!e.target.closest('.highlight-tooltip')) {
+  } else if (!e.target.closest('.highlight-tooltip') && !e.target.closest('#simplify-popup')) {
     tooltip.classList.remove('visible');
   }
 });
 
-// Reader scroll progress
+function askHighlightDoubt() {
+  const text = document.getElementById('highlight-tooltip')?.dataset.selected || '';
+  document.getElementById('highlight-tooltip')?.classList.remove('visible');
+  showPage('doubt');
+  setTimeout(() => {
+    const inp = document.getElementById('doubtInput');
+    if (inp) {
+      inp.value = `Explain this: "${text.substring(0, 120)}"`;
+      inp.focus();
+    }
+  }, 300);
+}
+
+function simplifyHighlighted() {
+  const text = document.getElementById('highlight-tooltip')?.dataset.selected || '';
+  document.getElementById('highlight-tooltip')?.classList.remove('visible');
+  if (text) {
+    fetchSimplifiedExplanation(text);
+  } else {
+    toggleSimplify();
+  }
+}
+
+/* ─────────────────── AI SIMPLIFY POPUP ─────────────────────── */
+async function fetchSimplifiedExplanation(text) {
+  const popup = document.getElementById('simplify-popup');
+  const content = document.querySelector('.sp-content');
+  if (!popup || !content) return;
+
+  popup.classList.add('visible');
+  content.innerHTML = `<div style="display:flex;align-items:center;gap:8px;color:var(--fg-muted);">
+    <div style="width:14px;height:14px;border:2px solid var(--accent);border-top-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
+    Simplifying with AI…
+  </div>`;
+
+  // Add spin animation if not present
+  if (!document.getElementById('spin-style')) {
+    const s = document.createElement('style');
+    s.id = 'spin-style';
+    s.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+    document.head.appendChild(s);
+  }
+
+  const prompt = `You are a friendly tutor explaining a physics concept to a Class 12 student. 
+Simplify the following text using an everyday analogy or relatable example. 
+Keep it under 60 words, conversational and clear. No jargon.
+
+Text to simplify: "${text}"`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 200,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await res.json();
+    const reply = data.content?.[0]?.text || 'Could not simplify. Please try again.';
+    content.innerHTML = reply;
+  } catch (err) {
+    // Fallback to static content
+    content.innerHTML = 'Imagine you are pushing a friend on a swing. If you push at the exact moment the swing comes back, your friend goes higher with even tiny pushes. That\'s resonance — the bridge had its own "swing rhythm" and the wind accidentally matched it perfectly.';
+  }
+}
+
+/* ─────────────────── DOUBT SOLVER (AI) ─────────────────────── */
+const DOUBT_CONTEXT = `You are Clarity AI, a helpful tutor for Indian high school and engineering students (Sem 5 subjects: DSA, OS, DBMS, Networks, plus Class 11-12 Physics, Chemistry, Biology, Maths). 
+You give step-by-step explanations, reference the syllabus, and use relatable analogies.
+Format: Use <strong> for key terms, <br><br> for paragraph breaks. Keep responses focused (max 200 words).
+Always start with: "Clarity AI · Step-by-step:" followed by the explanation.`;
+
+async function sendDoubt() {
+  const inp = document.getElementById('doubtInput');
+  const val = inp?.value.trim();
+  if (!val) return;
+
+  const area = document.getElementById('chatArea');
+  inp.value = '';
+
+  // User bubble
+  area.innerHTML += `<div class="msg user">${escapeHtml(val)}</div>`;
+  area.scrollTop = area.scrollHeight;
+
+  // Typing indicator
+  const typingId = 'typing-' + Date.now();
+  area.innerHTML += `<div class="msg ai" id="${typingId}" style="display:flex;align-items:center;gap:6px;">
+    <div style="display:flex;gap:3px;">
+      ${[0,100,200].map(d=>`<div style="width:6px;height:6px;border-radius:50%;background:var(--accent);animation:bounce .8s ${d}ms ease infinite;"></div>`).join('')}
+    </div>
+    <span style="font-size:12px;color:var(--fg-muted);">Clarity AI is thinking…</span>
+  </div>`;
+
+  if (!document.getElementById('bounce-style')) {
+    const s = document.createElement('style');
+    s.id = 'bounce-style';
+    s.textContent = '@keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }';
+    document.head.appendChild(s);
+  }
+  area.scrollTop = area.scrollHeight;
+
+  // Try AI first, fallback to static responses
+  let reply = '';
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 400,
+        system: DOUBT_CONTEXT,
+        messages: [
+          ...state.doubtHistory.slice(-6),
+          { role: 'user', content: val }
+        ]
+      })
+    });
+    const data = await res.json();
+    reply = data.content?.[0]?.text || '';
+    if (reply) {
+      state.doubtHistory.push({ role: 'user', content: val });
+      state.doubtHistory.push({ role: 'assistant', content: reply });
+    }
+  } catch (e) { /* will use fallback */ }
+
+  if (!reply) {
+    // Static fallbacks
+    const key = val.toLowerCase().replace(/[^a-z0-9 ]/g, '');
+    const fallbacks = {
+      'bfs vs dfs': '<strong>Clarity AI · Step-by-step:</strong><br><br><strong>BFS (Breadth-First Search):</strong> Explores level by level using a Queue. Best for shortest path. Time: O(V+E).<br><br><strong>DFS (Depth-First Search):</strong> Goes deep before backtracking using a Stack. Best for cycle detection and topological sort. Time: O(V+E).<br><br><strong>Rule of thumb:</strong> BFS for shortest path, DFS for exploring all paths.',
+      'bfs dfs': '<strong>Clarity AI · Step-by-step:</strong><br><br><strong>BFS:</strong> Queue-based, level-by-level exploration. Best for shortest paths.<br><br><strong>DFS:</strong> Stack-based (or recursive), explores depth first. Best for detecting cycles and backtracking problems.',
+      '3nf': '<strong>Clarity AI · Step-by-step:</strong><br><br><strong>3NF (Third Normal Form)</strong><br><br>1NF → Atomic values only.<br>2NF → No partial dependencies on the primary key.<br>3NF → No transitive dependencies (non-key attribute must not depend on another non-key).<br><br><em>Example:</em> If Student → City → ZipCode, move City–ZipCode into a separate table.',
+      'deadlock': '<strong>Clarity AI · Step-by-step:</strong><br><br>Deadlock needs all 4 Coffman conditions:<br><br>1. <strong>Mutual Exclusion</strong><br>2. <strong>Hold and Wait</strong><br>3. <strong>No Preemption</strong><br>4. <strong>Circular Wait</strong><br><br>Break ANY one to prevent deadlock.',
+      'tcp': '<strong>Clarity AI · Step-by-step:</strong><br><br><strong>TCP 3-Way Handshake:</strong><br><br>① Client → Server: <code>SYN</code><br>② Server → Client: <code>SYN-ACK</code><br>③ Client → Server: <code>ACK</code><br><br>Both sides confirm readiness before data flows.',
+    };
+    for (const k of Object.keys(fallbacks)) {
+      if (key.includes(k)) { reply = fallbacks[k]; break; }
+    }
+    if (!reply) reply = `<strong>Clarity AI:</strong> Great question! This topic is part of your syllabus. Let me break it down: "${escapeHtml(val)}" — I'd look at this from first principles, connecting it to what you already know. Could you tell me which subject this is from so I can give a more targeted explanation?`;
+  }
+
+  // Remove typing indicator, add reply
+  document.getElementById(typingId)?.remove();
+  area.innerHTML += `<div class="msg ai">${reply}</div>`;
+  area.scrollTop = area.scrollHeight;
+}
+
+function addSuggested(btn) {
+  const inp = document.getElementById('doubtInput');
+  if (inp) inp.value = btn.textContent;
+  sendDoubt();
+}
+
+function setDiff(d) {
+  ['easy','med','hard'].forEach(x => {
+    const el = document.getElementById('diff-' + x);
+    if (!el) return;
+    if (x === d) { el.style.background = 'var(--accent-soft)'; el.style.color = 'var(--accent)'; }
+    else { el.style.background = 'var(--bg-subtle)'; el.style.color = 'var(--fg-muted)'; }
+  });
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ─────────────────── TEACHER DASHBOARD ─────────────────────── */
+function notifyStudent(btn, name) {
+  const row = btn.closest('.at-risk-row');
+  btn.textContent = 'Sent ✓';
+  btn.style.background = 'var(--accent-2)';
+  btn.disabled = true;
+  toast(`Notification sent to ${name}`, 'success');
+}
+
+function openStoryRow(title) {
+  showModal(`
+    <div style="padding:28px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+        <div style="font-family:var(--font-display);font-size:20px;font-weight:700;">Edit Story</div>
+        <button onclick="closeModal()" style="cursor:pointer;background:none;border:none;color:var(--fg-muted);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div style="margin-bottom:14px;">
+        <label class="form-label">Story Title</label>
+        <input class="form-input" type="text" value="${escapeHtml(title)}">
+      </div>
+      <div style="margin-bottom:14px;">
+        <label class="form-label">Subject</label>
+        <select class="form-input" style="cursor:pointer;">
+          <option>Physics</option><option>Chemistry</option><option>Biology</option>
+          <option>Mathematics</option><option>Economics</option>
+        </select>
+      </div>
+      <div style="margin-bottom:14px;">
+        <label class="form-label">Status</label>
+        <select class="form-input" style="cursor:pointer;">
+          <option value="published">Published</option>
+          <option value="draft">Draft</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:20px;">
+        <button class="btn btn-primary" onclick="closeModal();toast('Story updated!','success');">
+          Save Changes
+        </button>
+        <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-ghost" style="margin-left:auto;color:#DC2626;" onclick="closeModal();toast('Story deleted.','error',2500);">
+          Delete
+        </button>
+      </div>
+    </div>
+  `, { maxWidth: '480px' });
+}
+
+function openStoryBuilder() {
+  showModal(`
+    <div style="padding:28px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+        <div>
+          <div style="font-family:var(--font-display);font-size:22px;font-weight:700;">New Story</div>
+          <div style="font-size:13px;color:var(--fg-muted);margin-top:2px;">Create a narrative lesson for your students</div>
+        </div>
+        <button onclick="closeModal()" style="cursor:pointer;background:none;border:none;color:var(--fg-muted);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Story Title</label>
+        <input class="form-input" type="text" placeholder="e.g. Why Do Bridges Sway? Understanding Resonance">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <select class="form-input" style="cursor:pointer;">
+            <option>Physics</option><option>Chemistry</option><option>Biology</option>
+            <option>Mathematics</option><option>Economics</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Grade Level</label>
+          <select class="form-input" style="cursor:pointer;">
+            <option>Class 11-12</option><option>Class 9-10</option><option>Class 6-8</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Opening Hook (The Story)</label>
+        <textarea class="form-input" rows="4" placeholder="Start with a real event, mystery, or situation that sets up the concept…" style="resize:vertical;"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Concept Explanation</label>
+        <textarea class="form-input" rows="3" placeholder="Explain the theory, connecting it back to the story…" style="resize:vertical;"></textarea>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <button class="btn btn-primary" style="flex:1;justify-content:center;" onclick="closeModal();toast('Story saved as draft!','success');">
+          Save Draft
+        </button>
+        <button class="btn btn-green" style="flex:1;justify-content:center;" onclick="closeModal();toast('Story published! Students can now read it.','success',4000);">
+          Publish
+        </button>
+      </div>
+    </div>
+  `, { maxWidth: '560px' });
+}
+
+/* ─────────────────── STUDENT DASHBOARD ─────────────────────── */
+function showStudentSection(section, clickedItem) {
+  // Update active nav item
+  document.querySelectorAll('.ds-nav-item').forEach(i => i.classList.remove('active'));
+  if (clickedItem) clickedItem.classList.add('active');
+
+  const main = document.querySelector('.dash-content');
+  if (!main) return;
+
+  const sectionContent = {
+    'saved': `
+      <div class="dash-greeting">
+        <h1>Saved Stories</h1>
+        <p>Your personal reading list — ${state.saved.size} stories saved.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+        ${state.saved.size > 0 ? [...state.saved].map(id => `
+          <div class="card" style="cursor:pointer;" onclick="showPage('reader')">
+            <div class="badge badge-orange" style="margin-bottom:10px;">Physics</div>
+            <div style="font-weight:700;font-size:15px;margin-bottom:6px;font-family:var(--font-display);">Why Does the Bridge Wobble?</div>
+            <div style="font-size:13px;color:var(--fg-muted);">8 min · Dr. Deepak Singh · ⭐ 4.9</div>
+          </div>
+        `).join('') : `
+          <div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--fg-muted);">
+            <div style="font-size:40px;margin-bottom:16px;">📖</div>
+            <div style="font-size:16px;font-weight:600;margin-bottom:8px;">No saved stories yet</div>
+            <div style="font-size:14px;margin-bottom:20px;">Use the Bookmark button while reading to save stories here.</div>
+            <button class="btn btn-primary" onclick="showPage('library')">Browse Library</button>
+          </div>
+        `}
+      </div>
+    `,
+    'exam': `
+      <div class="dash-greeting">
+        <h1>Exam Preparation</h1>
+        <p>Physics board exam in <strong>12 days</strong>. You're on track.</p>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon" style="background:var(--accent-soft);color:var(--accent);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="dash-stat-val">11/18</div>
+          <div class="dash-stat-lbl">Chapters Done</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon" style="background:var(--accent-2-soft);color:var(--accent-2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="dash-stat-val">12d</div>
+          <div class="dash-stat-lbl">Days Until Exam</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon" style="background:#FDF5DC;color:#B8860B;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="dash-stat-val">78%</div>
+          <div class="dash-stat-lbl">Avg Quiz Score</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon" style="background:#E8EDF5;color:#2D5FA0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="dash-stat-val">7</div>
+          <div class="dash-stat-lbl">Chapters Remaining</div>
+        </div>
+      </div>
+      <div class="dash-section-title">Recommended for Today</div>
+      ${[
+        {title:'Electromagnetic Induction', mins:9, badge:'badge-orange', subject:'Physics'},
+        {title:'Semiconductors & Diodes', mins:11, badge:'badge-navy', subject:'Physics'},
+        {title:'Wave Optics', mins:8, badge:'badge-orange', subject:'Physics'},
+      ].map(s => `
+        <div class="continue-card" onclick="showPage('reader')">
+          <div class="continue-thumb">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="continue-info">
+            <div class="continue-title">${s.title}</div>
+            <div class="continue-sub">${s.subject} · ${s.mins} min read</div>
+            <div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div>
+          </div>
+          <span class="badge ${s.badge}">Start</span>
+        </div>
+      `).join('')}
+    `,
+    'analytics': `
+      <div class="dash-greeting">
+        <h1>My Analytics</h1>
+        <p>Track your learning performance and identify areas to improve.</p>
+      </div>
+      <div class="dash-two-col">
+        <div>
+          <div class="dash-section-title">Subject Scores</div>
+          <div class="card card-flat" style="padding:20px;">
+            <div id="analytics-bars" style="display:flex;align-items:flex-end;gap:10px;height:120px;margin-bottom:10px;"></div>
+            <div id="analytics-legend" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="dash-section-title">Topic Mastery</div>
+          <div id="analytics-topics" class="card card-flat" style="padding:16px;"></div>
+        </div>
+      </div>
+    `,
+    'achievements': `
+      <div class="dash-greeting">
+        <h1>Achievements</h1>
+        <p>You've earned <strong>8 of 24</strong> badges. Keep going!</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        ${[
+          {icon:'🔥',name:'14-Day Streak',desc:'Read every day for 2 weeks',earned:true},
+          {icon:'📚',name:'Story Reader',desc:'Completed 42 stories',earned:true},
+          {icon:'⭐',name:'Quiz Master',desc:'Scored 100% on 5 quizzes',earned:true},
+          {icon:'🎯',name:'Sharp Shooter',desc:'78% average quiz accuracy',earned:true},
+          {icon:'⚡',name:'Exam Warrior',desc:'Used Exam Mode 10 times',earned:true},
+          {icon:'🕐',name:'Time Invested',desc:'31 hours of study logged',earned:true},
+          {icon:'🏆',name:'Subject Champion',desc:'Complete all Math chapters',earned:true},
+          {icon:'💬',name:'Curious Mind',desc:'Asked 25 doubts',earned:true},
+          {icon:'🚀',name:'Speed Reader',desc:'Complete a story in one sitting',earned:false},
+          {icon:'🌟',name:'Perfect Score',desc:'100% on a full subject test',earned:false},
+          {icon:'🔬',name:'Science Geek',desc:'Read 20 science stories',earned:false},
+          {icon:'📖',name:'Bibliophile',desc:'Complete all 840 stories',earned:false},
+        ].map(a => `
+          <div class="card" style="${a.earned ? '' : 'opacity:.4;filter:grayscale(1);'}cursor:default;text-align:center;padding:20px 16px;">
+            <div style="font-size:32px;margin-bottom:8px;">${a.icon}</div>
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;">${a.name}</div>
+            <div style="font-size:11px;color:var(--fg-muted);">${a.desc}</div>
+            ${a.earned ? '<div style="margin-top:8px;"><span class="badge badge-green">Earned</span></div>' : ''}
+          </div>
+        `).join('')}
+      </div>
+    `,
+  };
+
+  if (sectionContent[section]) {
+    main.innerHTML = sectionContent[section];
+    setTimeout(() => {
+      lucide.createIcons();
+      if (section === 'analytics') buildBars();
+    }, 50);
+  }
+}
+
+/* ─────────────────── ADMIN CHARTS ─────────────────────── */
+const subjects = [{n:'DSA',score:65,c:'#6c63ff'},{n:'DBMS',score:72,c:'#3b82f6'},{n:'OS',score:84,c:'#10b981'},{n:'Networks',score:78,c:'#f59e0b'}];
+const topics   = [{n:'Trees',p:82,c:'#10b981'},{n:'Graphs',p:48,c:'#ef4444'},{n:'Normalization',p:58,c:'#f59e0b'},{n:'Scheduling',p:87,c:'#10b981'},{n:'TCP/IP',p:74,c:'#6c63ff'}];
+
+function buildBars(barId, legId, data, scoreKey) {
+  const bId = barId || 'barChart';
+  const lId = legId || 'barLegend';
+  const d = data || subjects;
+  const key = scoreKey || 'score';
+  const el = document.getElementById(bId);
+  if (!el) return;
+  const max = Math.max(...d.map(s => s[key]));
+  el.innerHTML = d.map(s => `
+    <div class="bar-wrap">
+      <div class="bar" style="height:${Math.round(s[key]/max*110)}px;background:${s.c};"
+        title="${s.n}: ${s[key]}%"></div>
+      <div class="bar-lbl">${s.n}</div>
+    </div>
+  `).join('');
+  const leg = document.getElementById(lId);
+  if (leg) leg.innerHTML = d.map(s => `
+    <span style="display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--fg-muted);">
+      <span style="width:10px;height:10px;border-radius:2px;background:${s.c};display:inline-block;"></span>
+      ${s.n}: ${s[key]}%
+    </span>
+  `).join('');
+
+  // analytics-bars
+  const ab = document.getElementById('analytics-bars');
+  if (ab) {
+    ab.innerHTML = subjects.map(s => `
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <div style="width:100%;background:${s.c};border-radius:4px 4px 0 0;height:${Math.round(s.score/100*110)}px;transition:height .6s;"></div>
+        <div style="font-size:10px;color:var(--fg-faint);">${s.n}</div>
+      </div>
+    `).join('');
+    const al = document.getElementById('analytics-legend');
+    if (al) al.innerHTML = subjects.map(s => `
+      <span style="display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--fg-muted);">
+        <span style="width:10px;height:10px;border-radius:2px;background:${s.c};display:inline-block;"></span>
+        ${s.n}: ${s.score}%
+      </span>
+    `).join('');
+    const at = document.getElementById('analytics-topics');
+    if (at) at.innerHTML = topics.map(t => `
+      <div class="topic-row" style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:80px;font-size:12px;font-weight:600;">${t.n}</div>
+        <div class="progress-track" style="flex:1;"><div class="progress-fill" style="width:${t.p}%;background:${t.c};"></div></div>
+        <div style="font-size:12px;font-weight:600;width:32px;text-align:right;">${t.p}%</div>
+      </div>
+    `).join('');
+  }
+}
+
+function buildTopics() {
+  const el = document.getElementById('topicBars');
+  if (!el) return;
+  el.innerHTML = topics.map(t => `
+    <div class="topic-row" style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+      <div style="width:90px;font-size:12px;font-weight:600;">${t.n}</div>
+      <div class="progress-track" style="flex:1;"><div class="progress-fill" style="width:${t.p}%;background:${t.c};"></div></div>
+      <div class="topic-pct" style="font-size:12px;font-weight:600;width:32px;text-align:right;">${t.p}%</div>
+    </div>
+  `).join('');
+}
+
+function buildAdminCharts() {
+  buildBars();
+  buildTopics();
+  const el = document.getElementById('adminBarChart');
+  if (!el) return;
+  const bands = [{r:'0–40%',v:8,c:'#ef4444'},{r:'40–60%',v:22,c:'#f59e0b'},{r:'60–75%',v:48,c:'#6c63ff'},{r:'75–90%',v:32,c:'#10b981'},{r:'90%+',v:10,c:'#059669'}];
+  const max = 48;
+  el.innerHTML = bands.map(b => `
+    <div class="bar-wrap">
+      <div class="bar" style="height:${Math.round(b.v/max*110)}px;background:${b.c};"></div>
+      <div class="bar-lbl">${b.r}</div>
+      <div class="bar-lbl" style="color:var(--fg);font-weight:600">${b.v}</div>
+    </div>
+  `).join('');
+  const subj = [{n:'DSA',p:61},{n:'DBMS',p:58},{n:'OS',p:73},{n:'Networks',p:70}];
+  const at = document.getElementById('adminTopics');
+  if (at) at.innerHTML = subj.map(s => `
+    <div class="topic-row" style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+      <div style="width:80px;font-size:12px;font-weight:600;">${s.n}</div>
+      <div class="progress-track" style="flex:1;"><div class="progress-fill" style="width:${s.p}%;background:${s.p<65?'#ef4444':s.p<72?'#f59e0b':'#10b981'};"></div></div>
+      <div style="font-size:12px;font-weight:600;width:32px;text-align:right;">${s.p}%</div>
+    </div>
+  `).join('');
+}
+
+/* ─────────────────── MOBILE MENU ─────────────────────── */
+function toggleMobileMenu() {
+  let menu = document.getElementById('mobile-menu');
+  if (menu) { menu.remove(); return; }
+  menu = document.createElement('div');
+  menu.id = 'mobile-menu';
+  menu.style.cssText = `
+    position:fixed;top:var(--nav-h);left:0;right:0;z-index:900;
+    background:var(--bg-card);border-bottom:1px solid var(--border);
+    padding:16px;display:flex;flex-direction:column;gap:4px;
+    animation:pageFade .2s ease;box-shadow:var(--shadow-md);
+  `;
+  const links = [
+    ['Library', 'library'], ['For Students', 'student'],
+    ['For Teachers', 'teacher'], ['Ask Doubt', 'doubt'], ['Admin', 'admin']
+  ];
+  links.forEach(([label, page]) => {
+    const btn = document.createElement('button');
+    btn.className = 'nav-link';
+    btn.style.cssText = 'width:100%;text-align:left;padding:12px 16px;font-size:15px;';
+    btn.textContent = label;
+    btn.onclick = () => { showPage(page); menu.remove(); };
+    menu.appendChild(btn);
+  });
+  document.body.appendChild(menu);
+  document.addEventListener('click', function dismiss(e) {
+    if (!e.target.closest('#mobile-menu') && !e.target.closest('.mobile-menu-btn')) {
+      menu?.remove();
+      document.removeEventListener('click', dismiss);
+    }
+  }, { once: false });
+}
+
+/* ─────────────────── ANIMATED COUNTERS ─────────────────────── */
+function animateCounters() {
+  document.querySelectorAll('.stat-num').forEach(el => {
+    const text = el.textContent.trim();
+    const match = text.match(/^(\d+)(\D*)$/);
+    if (!match) return;
+    const target = parseInt(match[1]);
+    const suffix = match[2];
+    let current = 0;
+    const step = Math.ceil(target / 60);
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = current + suffix;
+      if (current >= target) clearInterval(timer);
+    }, 20);
+  });
+}
+
+/* ─────────────────── TEACHER TABLE ROW CLICKS ─────────────────────── */
+document.addEventListener('click', function(e) {
+  const row = e.target.closest('.t-row');
+  if (row && !e.target.closest('button')) {
+    const title = row.querySelector('.t-row-title')?.textContent || 'Story';
+    openStoryRow(title);
+  }
+});
+
+/* ─────────────────── AT-RISK NOTIFY BUTTONS ─────────────────────── */
+document.addEventListener('click', function(e) {
+  if (e.target.textContent === 'Notify' && e.target.matches('button')) {
+    const row = e.target.closest('.at-risk-row');
+    const name = row?.querySelector('.ar-name')?.textContent || 'Student';
+    notifyStudent(e.target, name);
+  }
+});
+
+/* ─────────────────── TOOLBAR BUTTON WIRING ─────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  // Wire toolbar buttons
+  document.querySelectorAll('.toolbar-btn').forEach(btn => {
+    const text = btn.textContent.trim();
+    if (text.includes('Save')) {
+      btn.addEventListener('click', toggleSave);
+    } else if (text.includes('Share')) {
+      btn.addEventListener('click', shareStory);
+    }
+  });
+
+  // Wire download PDF button in exam overlay
+  document.querySelectorAll('.exam-notes .btn-primary, .exam-overlay .btn-primary').forEach(btn => {
+    if (btn.textContent.trim().includes('Download')) {
+      btn.addEventListener('click', downloadExamNotes);
+    }
+  });
+
+  // Wire auth form submit buttons
+  const signupBtn = document.querySelector('#auth-signup .btn-primary[onclick*="showPage"]');
+  if (signupBtn) {
+    signupBtn.removeAttribute('onclick');
+    signupBtn.addEventListener('click', handleSignup);
+  }
+  const signinBtn = document.querySelector('#auth-signin .btn-primary[onclick*="showPage"]');
+  if (signinBtn) {
+    signinBtn.removeAttribute('onclick');
+    signinBtn.addEventListener('click', handleSignin);
+  }
+
+  // Wire Google auth buttons
+  document.querySelectorAll('.btn-secondary').forEach(btn => {
+    if (btn.textContent.trim().includes('Google')) {
+      btn.addEventListener('click', () => {
+        toast('Google sign-in would open in a real app.', 'info', 2500);
+        setTimeout(() => {
+          state.user = { name: 'Arjun Mehta', email: 'arjun@example.com', role: 'student' };
+          showPage('student');
+          toast('Signed in as Arjun Mehta 👋', 'success');
+        }, 1000);
+      });
+    }
+  });
+
+  // Student dashboard sidebar items
+  const dsNavItems = document.querySelectorAll('.ds-nav-item');
+  const sectionMap = {
+    'My Library': () => showPage('library'),
+    'Saved Stories': (el) => showStudentSection('saved', el),
+    'Exam Prep': (el) => showStudentSection('exam', el),
+    'Analytics': (el) => showStudentSection('analytics', el),
+    'Achievements': (el) => showStudentSection('achievements', el),
+    'My Doubts': () => showPage('doubt'),
+    'Settings': () => {
+      showModal(`
+        <div style="padding:24px;">
+          <div style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:16px;">Settings</div>
+          <div class="form-group">
+            <label class="form-label">Display Name</label>
+            <input class="form-input" type="text" value="Arjun Mehta">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" value="arjun@example.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Theme</label>
+            <select class="form-input" style="cursor:pointer;" onchange="if(this.value==='dark'&&!state.dark||this.value==='light'&&state.dark)toggleTheme()">
+              <option value="light" ${!state.dark?'selected':''}>Light</option>
+              <option value="dark" ${state.dark?'selected':''}>Dark</option>
+            </select>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:16px;">
+            <button class="btn btn-primary" onclick="closeModal();toast('Settings saved!','success');">Save</button>
+            <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+          </div>
+        </div>
+      `);
+    },
+    'Sign Out': () => {
+      state.user = null;
+      toast('Signed out successfully.', 'info', 2000);
+      showPage('home');
+    },
+  };
+
+  dsNavItems.forEach(item => {
+    const label = item.textContent.trim();
+    const handler = sectionMap[label];
+    if (handler) {
+      item.addEventListener('click', (e) => {
+        if (!['My Library','My Doubts','Sign Out'].includes(label)) {
+          dsNavItems.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+        }
+        handler(item);
+      });
+    }
+  });
+
+  // Teacher "Create Story" button
+  document.querySelectorAll('.btn').forEach(btn => {
+    const text = btn.textContent.trim();
+    if (text.includes('Create Story') || text.includes('New Story')) {
+      btn.addEventListener('click', openStoryBuilder);
+    }
+  });
+
+  // Story cards hover effect
+  document.querySelectorAll('.story-card').forEach(card => {
+    card.style.cursor = 'pointer';
+  });
+
+  // Forgot password
+  document.querySelectorAll('[style*="Forgot"],.auth-right [style*="cursor:pointer"]').forEach(el => {
+    if (el.textContent.includes('Forgot')) {
+      el.addEventListener('click', () => {
+        toast('Password reset email sent (demo mode).', 'info');
+      });
+    }
+  });
+
+  // Mobile menu button
+  const mobileBtn = document.querySelector('.mobile-menu-btn');
+  if (mobileBtn) mobileBtn.addEventListener('click', toggleMobileMenu);
+
+  // "Enter" key in auth forms
+  document.querySelectorAll('#auth-signup input, #auth-signin input').forEach(inp => {
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const form = inp.closest('#auth-signup') || inp.closest('#auth-signin');
+        if (form?.id === 'auth-signup') handleSignup();
+        else handleSignin();
+      }
+    });
+  });
+
+  // Initialize Lucide icons
+  lucide.createIcons();
+
+  // Animate home page counters
+  setTimeout(animateCounters, 400);
+
+  // Init library search
+  initLibrary();
+});
+
+/* ─────────────────── KEYBOARD SHORTCUTS ─────────────────────── */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal();
+    document.getElementById('exam-overlay')?.classList.remove('visible');
+    document.getElementById('simplify-popup')?.classList.remove('visible');
+    document.getElementById('highlight-tooltip')?.classList.remove('visible');
+    document.getElementById('mobile-menu')?.remove();
+  }
+  // / to focus library search
+  if (e.key === '/' && state.currentPage === 'library' && e.target.tagName !== 'INPUT') {
+    e.preventDefault();
+    document.querySelector('.library-header .search-box input')?.focus();
+  }
+});
+
+/* ─────────────────── HOME PAGE STATS (animated on view) ─────────────────────── */
+let statsAnimated = false;
+const statsObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !statsAnimated) {
+      statsAnimated = true;
+      animateCounters();
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stats-row').forEach(el => statsObserver.observe(el));
+
+/* ─────────────────── READER SCROLL PROGRESS ─────────────────────── */
 window.addEventListener('scroll', () => {
   const page = document.getElementById('page-reader');
-  if (!page.classList.contains('active')) return;
-  const scrollEl = document.getElementById('reader-scroll-area');
+  if (!page?.classList.contains('active')) return;
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
-  const progress = Math.min(100, (scrollTop / docHeight) * 100);
+  const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
   const bar = document.getElementById('reader-prog');
   if (bar) bar.style.width = progress + '%';
 });
 
+/* ─────────────────── INITIAL PAGE ─────────────────────── */
+showPage('home');
 
-// =============================================
-// DOUBT SOLVER + ADMIN ANALYTICS
-// =============================================
-const subjects=[{n:'DSA',score:65,c:'#6c63ff'},{n:'DBMS',score:72,c:'#3b82f6'},{n:'OS',score:84,c:'#10b981'},{n:'Networks',score:78,c:'#f59e0b'}];
-const topics=[{n:'Trees',p:82,c:'#10b981'},{n:'Graphs',p:48,c:'#ef4444'},{n:'Normalization',p:58,c:'#f59e0b'},{n:'Scheduling',p:87,c:'#10b981'},{n:'TCP/IP',p:74,c:'#6c63ff'}];
-
-function buildBars(){
-  const el=document.getElementById('barChart');
-  if(!el)return;
-  el.innerHTML=subjects.map(s=>`<div class="bar-wrap"><div class="bar" style="height:${s.score}px;background:${s.c}"></div><div class="bar-lbl">${s.n}</div></div>`).join('');
-  const leg=document.getElementById('barLegend');
-  if(leg)leg.innerHTML=subjects.map(s=>`<span style="display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--fg-muted)"><span style="width:10px;height:10px;border-radius:2px;background:${s.c};display:inline-block"></span>${s.n}: ${s.score}%</span>`).join('');
-}
-function buildTopics(){
-  const el=document.getElementById('topicBars');
-  if(!el)return;
-  el.innerHTML=topics.map(t=>`<div class="topic-row"><div class="topic-label">${t.n}</div><div class="progress-track" style="flex:1"><div class="progress-fill" style="width:${t.p}%;background:${t.c}"></div></div><div class="topic-pct">${t.p}%</div></div>`).join('');
-}
-function buildAdminCharts(){
-  const el=document.getElementById('adminBarChart');
-  if(!el)return;
-  const bands=[{r:'0–40%',v:8,c:'#ef4444'},{r:'40–60%',v:22,c:'#f59e0b'},{r:'60–75%',v:48,c:'#6c63ff'},{r:'75–90%',v:32,c:'#10b981'},{r:'90%+',v:10,c:'#059669'}];
-  const max=48;
-  el.innerHTML=bands.map(b=>`<div class="bar-wrap"><div class="bar" style="height:${Math.round(b.v/max*110)}px;background:${b.c}"></div><div class="bar-lbl">${b.r}</div><div class="bar-lbl" style="color:var(--fg);font-weight:600">${b.v}</div></div>`).join('');
-  const subj=[{n:'DSA',p:61},{n:'DBMS',p:58},{n:'OS',p:73},{n:'Networks',p:70}];
-  const at=document.getElementById('adminTopics');
-  if(at)at.innerHTML=subj.map(s=>`<div class="topic-row"><div class="topic-label">${s.n}</div><div class="progress-track" style="flex:1"><div class="progress-fill" style="width:${s.p}%;background:${s.p<65?'#ef4444':s.p<72?'#f59e0b':'#10b981'}"></div></div><div class="topic-pct">${s.p}%</div></div>`).join('');
-}
-
-const aiResponses={
-  'bfs vs dfs':'<strong>BFS vs DFS — Key Differences</strong><br><br><strong>BFS (Breadth-First Search):</strong> Explores level by level using a Queue. Best for finding shortest path. Time: O(V+E).<br><br><strong>DFS (Depth-First Search):</strong> Goes deep before backtracking using a Stack. Best for cycle detection and topological sort. Time: O(V+E).<br><br><strong>Rule of thumb:</strong> BFS for shortest path, DFS for exploring all paths.',
-  '3nf normalization':'<strong>3NF (Third Normal Form) — Step by Step</strong><br><br><strong>Step 1 — 1NF:</strong> No repeating groups; atomic values only.<br><strong>Step 2 — 2NF:</strong> No partial dependencies (all non-key attributes depend on the full key).<br><strong>Step 3 — 3NF:</strong> No transitive dependencies (non-key attribute must not depend on another non-key attribute).<br><br><em>Example:</em> If Student → City → ZipCode exists, move City–ZipCode into a separate table.',
-  'deadlock in os':'<strong>Deadlock in OS — Explained</strong><br><br>Deadlock occurs when all 4 Coffman conditions hold simultaneously:<br><br>1. <strong>Mutual Exclusion</strong> — Resource held exclusively<br>2. <strong>Hold and Wait</strong> — Process holds one resource and waits for another<br>3. <strong>No Preemption</strong> — Resources cannot be forcibly taken<br>4. <strong>Circular Wait</strong> — P1 waits for P2, P2 waits for P1<br><br><strong>Prevention:</strong> Break any one of the 4 conditions.',
-  'tcp handshake':'<strong>TCP 3-Way Handshake</strong><br><br><strong>Step 1 — SYN:</strong> Client sends SYN packet to server. seq = x<br><br><strong>Step 2 — SYN-ACK:</strong> Server replies SYN + ACK. seq = y, ack = x+1<br><br><strong>Step 3 — ACK:</strong> Client sends ACK. ack = y+1. Connection established.<br><br>This ensures both sides confirm readiness before any data is transferred.'
-};
-
-function sendDoubt(){
-  const inp=document.getElementById('doubtInput');
-  const val=inp.value.trim();
-  if(!val)return;
-  const area=document.getElementById('chatArea');
-  area.innerHTML+=`<div class="msg user">${val}</div>`;
-  inp.value='';
-  const key=val.toLowerCase().replace(/[^a-z0-9 ]/g,'');
-  let resp='<strong>Clarity AI:</strong> That is a great question. Let me analyze it against your Sem 5 syllabus and provide a step-by-step explanation. This topic appears in your curriculum — would you like me to break it down further or generate practice questions?';
-  for(const k in aiResponses){if(key.includes(k)){resp=`<strong>Clarity AI · Step-by-step:</strong><br><br>${aiResponses[k]}`;break;}}
-  setTimeout(()=>{area.innerHTML+=`<div class="msg ai">${resp}</div>`;area.scrollTop=area.scrollHeight;},600);
-  area.scrollTop=area.scrollHeight;
-}
-function addSuggested(btn){document.getElementById('doubtInput').value=btn.textContent;sendDoubt();}
-function setDiff(d){
-  ['easy','med','hard'].forEach(x=>{
-    const el=document.getElementById('diff-'+x);
-    if(x===d){el.style.background='var(--accent-soft)';el.style.color='var(--accent)';}
-    else{el.style.background='var(--bg-subtle)';el.style.color='var(--fg-muted)';}
-  });
-}
-
-
-
-// Filter pills interactivity
-document.querySelectorAll('.filter-pill').forEach(pill => {
-  pill.addEventListener('click', function() {
-    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
-
-// Sidebar items interactivity
-document.querySelectorAll('.sidebar-item').forEach(item => {
-  item.addEventListener('click', function() {
-    this.closest('.sidebar-section').querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
 </script>
 </body>
 </html>
